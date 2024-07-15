@@ -36,7 +36,8 @@ public class SecurityConfiguration {
     SecurityFilterChain configure(HttpSecurity http) throws Exception{
         http.authorizeRequests()
                 .antMatchers("/login/authenticate",
-                        "/usuarios/registrar").permitAll()
+                        "/usuarios/registrar",
+                                "categoria/**").permitAll()
                 .antMatchers("/usuarios/bandeja",
                         "/usuarios/listar",
                         "/usuarios/obtener/**",
