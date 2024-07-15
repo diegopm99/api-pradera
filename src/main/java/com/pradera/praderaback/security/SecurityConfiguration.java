@@ -37,7 +37,7 @@ public class SecurityConfiguration {
         http.authorizeRequests()
                 .antMatchers("/login/authenticate",
                         "/usuarios/registrar",
-                                "/categoria/**").permitAll()
+                                "/categoria/bandeja").permitAll()
                 .antMatchers("/usuarios/bandeja",
                         "/usuarios/listar",
                         "/usuarios/obtener/**",
