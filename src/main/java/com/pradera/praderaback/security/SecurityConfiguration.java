@@ -36,7 +36,14 @@ public class SecurityConfiguration {
     SecurityFilterChain configure(HttpSecurity http) throws Exception{
         http.csrf()
                 .disable()
-                .authorizeRequests()
+                .exceptionHandling()
+                .authenticationEntryPoint(entryPoint)
+                .and()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class)
+                .authorizeHttpRequests()
                 .antMatchers("/login/authenticate",
                         "/usuarios/registrar").permitAll()
                 .antMatchers("/usuarios/bandeja",
@@ -45,15 +52,7 @@ public class SecurityConfiguration {
                         "/usuarios/actualizar/",
                         "/usuarios/eliminar/**").hasRole("ADMIN")
                 .anyRequest()
-                .authenticated()
-                .and()
-                .exceptionHandling()
-                .authenticationEntryPoint(entryPoint)
-                .and()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class);
+                .authenticated();
         return http.build();
     }
 }
