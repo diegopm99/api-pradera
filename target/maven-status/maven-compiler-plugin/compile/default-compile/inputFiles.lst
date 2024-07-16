@@ -33,6 +33,7 @@ D:\UTP\Curso Integrador I\api-pradera\src\main\java\com\pradera\praderaback\mode
 D:\UTP\Curso Integrador I\api-pradera\src\main\java\com\pradera\praderaback\model\ProductoModel.java
 D:\UTP\Curso Integrador I\api-pradera\src\main\java\com\pradera\praderaback\model\UsuarioModel.java
 D:\UTP\Curso Integrador I\api-pradera\src\main\java\com\pradera\praderaback\dto\SalidaDTO.java
+D:\UTP\Curso Integrador I\api-pradera\src\main\java\com\pradera\praderaback\config\WebConfig.java
 D:\UTP\Curso Integrador I\api-pradera\src\main\java\com\pradera\praderaback\dto\CategoriaDTO.java
 D:\UTP\Curso Integrador I\api-pradera\src\main\java\com\pradera\praderaback\dto\JwtRequest.java
 D:\UTP\Curso Integrador I\api-pradera\src\main\java\com\pradera\praderaback\dto\ProductoDTO.java

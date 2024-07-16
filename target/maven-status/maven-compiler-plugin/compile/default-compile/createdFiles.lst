@@ -34,8 +34,8 @@ com\pradera\praderaback\security\TokenUtil.class
 com\pradera\praderaback\service\TrabajadorService.class
 com\pradera\praderaback\repository\SalidaRepository.class
 com\pradera\praderaback\model\SalidaModel.class
-com\pradera\praderaback\PraderaBackApplication$1.class
 com\pradera\praderaback\controller\LoginController.class
+com\pradera\praderaback\config\WebConfig$1.class
 com\pradera\praderaback\model\RolModel.class
 com\pradera\praderaback\controller\RolController.class
 com\pradera\praderaback\dto\UsuarioDTO.class
@@ -43,6 +43,7 @@ com\pradera\praderaback\model\ProductoModel.class
 com\pradera\praderaback\service\RolService.class
 com\pradera\praderaback\model\CategoriaModel.class
 com\pradera\praderaback\repository\ProductoRepository.class
+com\pradera\praderaback\config\WebConfig.class
 com\pradera\praderaback\dto\ProveedorDTO.class
 com\pradera\praderaback\service\ProveedorService.class
 com\pradera\praderaback\PraderaBackApplication.class
