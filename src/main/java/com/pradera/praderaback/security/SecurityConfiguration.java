@@ -34,10 +34,11 @@ public class SecurityConfiguration {
 
     @Bean
     SecurityFilterChain configure(HttpSecurity http) throws Exception{
-        http.authorizeRequests()
+        http.csrf()
+                .disable()
+                .authorizeRequests()
                 .antMatchers("/login/authenticate",
-                        "/usuarios/registrar",
-                                "/categoria/bandeja").permitAll()
+                        "/usuarios/registrar").permitAll()
                 .antMatchers("/usuarios/bandeja",
                         "/usuarios/listar",
                         "/usuarios/obtener/**",
@@ -52,8 +53,7 @@ public class SecurityConfiguration {
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                .addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class)
-                .csrf().disable();
+                .addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }
 }
