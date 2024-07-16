@@ -11,18 +11,14 @@ import org.springframework.http.HttpMethod;
 public class WebConfig {
 
     @Bean
-    public WebMvcConfigurer corsConfig(){
+    public WebMvcConfigurer corsConfigurer(){
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:4200", "https://pradera-almacen.netlify.app")
-                        .allowedMethods(HttpMethod.GET.name(),
-                                HttpMethod.POST.name(),
-                                HttpMethod.DELETE.name(),
-                                HttpMethod.OPTIONS.name())
-                        .allowedHeaders(HttpHeaders.CONTENT_TYPE,
-                                HttpHeaders.AUTHORIZATION);
+                        .allowedOrigins("*")
+                        .allowedHeaders("*")
+                        .allowedMethods("*");
             }
         };
     }
